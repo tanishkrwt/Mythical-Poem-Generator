@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Spectral:ital,wght@0,400;1,500&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Spectral', serif;
+  background-color: #0f0f1c;
+  color: #f0e6ff;
+  background-image: radial-gradient(circle at top left, #1c1b3a, #0f0f1c);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Light Theme */
+body.light-theme {
+  background: #fefefe;
+  color: #1a1a2e;
+}
+
+body.light-theme .container {
+  background: #fff;
+  border-color: #ccc;
+}
+
+body.light-theme input,
+body.light-theme #poem-output,
+body.light-theme .poem-actions button {
+  background-color: #f0f4ff;
+  color: #1a1a2e;
+  border-color: #bbb;
+}
+
+body.light-theme .navbar,
+body.light-theme .footer {
+  background-color: #e0e6f5;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: #1a1a2e;
+  color: #f7c84c;
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 30px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.5s ease;
+}
+
+.nav-buttons button {
+  margin-left: 10px;
+  font-size: 1em;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 25px 10px;
+  background-color: #1a1a2e;
+  color: #aab6ff;
+  font-size: 1em;
+  margin-top: 60px;
+}
+
+.footer .social-icons a {
+  margin: 0 10px;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: gold;
+  transition: transform 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  transform: scale(1.2);
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 40px;
+  background: linear-gradient(135deg, #1c1b3a, #2c2b4a);
+  border: 2px solid #4a4a6a;
+  border-radius: 14px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+/* Title */
+h1 {
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 2.6em;
+  text-align: center;
+  color: #f7c84c;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 5px #000;
+}
+
+/* Form */
+.form-group {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 15px;
+  font-style: italic;
+  color: #c5cfff;
+  font-size: 1.2em;
+}
+
+input[type="text"] {
+  width: 80%;
+  max-width: 500px;
+  padding: 12px;
+  font-size: 1.1em;
+  border: 1px solid #aab6ff;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.05);
+  color: inherit;
+  text-align: center;
+}
+
+input:focus {
+  outline: none;
+  border-color: #f7c84c;
+  box-shadow: 0 0 10px #f7c84c66;
+}
+
+#inspiration-quote {
+  margin-top: 10px;
+  font-style: italic;
+  color: #9bbfff;
+}
+
+/* Buttons */
+button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  border: none;
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #f7c84c, #e5a847);
+  color: #2a2f4f;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(45deg, #e5a847, #f7c84c);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* Poem Output */
+#poem-output {
+  white-space: pre-wrap;
+  margin-top: 30px;
+  padding: 25px;
+  border: 1px solid #7aa2ff;
+  background: rgba(255, 255, 255, 0.05);
+  font-style: italic;
+  font-size: 1.3em;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* Ornament */
+.ornament {
+  text-align: center;
+  font-size: 2.5em;
+  margin: 20px 0;
+  color: #f7c84c;
+  animation: glow 3s infinite ease-in-out alternate;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 10px #f7c84c66, 0 0 20px #e5a84744; }
+  100% { text-shadow: 0 0 20px #f7c84caa, 0 0 40px #e5a84777; }
+}
+
+/* Loading */
+.loading {
+  text-align: center;
+  font-style: italic;
+  margin: 20px 0;
+  font-size: 1.2em;
+  color: #c5cfff;
+}
+
+/* Actions */
+.poem-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Fade-in */
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Scroll Triggered */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+[data-animate].in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 25px 15px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+
+  .poem-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  overflow: auto;
+}
+
+.modal-content {
+  background: #2c2b4a;
+  color: #f0e6ff;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  font-family: 'Spectral', serif;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.modal-content h2 {
+  font-family: 'Cinzel Decorative', cursive;
+  margin-top: 0;
+  color: #f7c84c;
+}
+
+.close-btn {
+  float: right;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #f7c84c;
+}
+
+.close-btn:hover {
+  color: #e5a847;
+}
